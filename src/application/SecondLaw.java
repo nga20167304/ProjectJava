@@ -47,7 +47,7 @@ public class SecondLaw extends Application{
 		root.getChildren().add(button);
 		
 		Scene scene = new Scene(root,600,600);
-		primaryStage.setTitle("First law");
+		primaryStage.setTitle("Second Law");
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		
@@ -61,5 +61,8 @@ public class SecondLaw extends Application{
 			}
 			
 		});
+	}
+	public static void main(String[] args) {
+		launch(args);
 	}
 }

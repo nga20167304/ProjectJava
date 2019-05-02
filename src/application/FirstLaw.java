@@ -2,6 +2,7 @@ package application;
 
 import java.io.InputStream;
 
+import javafx.animation.Animation;
 import javafx.animation.TranslateTransition;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -25,10 +26,10 @@ public class FirstLaw extends Application{
 		InputStream input = clazz.getResourceAsStream("/application/bàn.jpg");
 		Image image = new Image(input);
 		ImageView imageView = new ImageView(image);
-		imageView.setFitHeight(100);
-		imageView.setFitWidth(100);
+		imageView.setFitHeight(200);
+		imageView.setFitWidth(200);
+		imageView.setTranslateX(200);
 		imageView.setPreserveRatio(true);
-//		imageView.set
 		
 		Circle cir = new Circle();
 		cir.setFill(Color.BLUEVIOLET);//set màu sắc
@@ -38,16 +39,16 @@ public class FirstLaw extends Application{
 		
 		TranslateTransition transition = new TranslateTransition();
 		transition.setDuration(Duration.millis(5000));
-		transition.setToX(500);
+		transition.setToX(600);
+		transition.setAutoReverse(false);
+		transition.setCycleCount(Animation.INDEFINITE);
 		transition.setNode(cir);
 		
 		Button button = new Button("Start");
 		
 		VBox root = new VBox();
 		root.setSpacing(50);
-		root.getChildren().add(imageView);
-		root.getChildren().add(cir);
-		root.getChildren().add(button);
+		root.getChildren().addAll(imageView,cir,button);
 		
 		Scene scene = new Scene(root,600,600);
 		primaryStage.setTitle("First law");
@@ -57,12 +58,14 @@ public class FirstLaw extends Application{
 		button.setOnAction(new EventHandler<ActionEvent>() {
 
 			@Override
-			public void handle(ActionEvent arg0) {
+			public void handle(ActionEvent event) {
 				// TODO Auto-generated method stub
 				transition.play();				
 			}
 			
 		});
 	}
-
+	public static void main(String[] args) {
+		launch(args);
+	}
 }

@@ -75,17 +75,17 @@ public class SecondLaw extends Application{
 		line2.setStrokeWidth(15);
 		
 		
-		String url="/application/car.jpg";
+		String url="/application/car.png";
 		Class<?> clazz=this.getClass();
 		InputStream input=clazz.getResourceAsStream(url);
 		Image image=new Image(input);
 		ImageView imageView1=new ImageView(image);
-		imageView1.setFitHeight(200);
+		imageView1.setFitHeight(100);
 		imageView1.setFitWidth(200);
 		
 		AnchorPane root=new AnchorPane();
 		
-		root.getChildren().addAll(line1,line2);
+		root.getChildren().addAll(line1,line2,imageView1);
 		Scene scene=new Scene(root,1400,700);
 		
 		primaryStage.setTitle("Seconds Newtons Laws");

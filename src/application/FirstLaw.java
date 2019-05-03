@@ -23,13 +23,13 @@ public class FirstLaw extends Application{
 	public void start(Stage primaryStage) throws Exception {
 		// TODO Auto-generated method stub
 		Class<?> clazz = this.getClass();
-		InputStream input = clazz.getResourceAsStream("/application/bàn.jpg");
+		InputStream input = clazz.getResourceAsStream("/application/table.png");
 		Image image = new Image(input);
 		ImageView imageView = new ImageView(image);
-		imageView.setFitHeight(200);
-		imageView.setFitWidth(200);
-		imageView.setTranslateX(600);
-		imageView.setTranslateY(205);
+		imageView.setFitHeight(300);
+		imageView.setFitWidth(300);
+		imageView.setTranslateX(500);
+		imageView.setTranslateY(185);
 		imageView.setPreserveRatio(true);
 		
 		Circle cir = new Circle();

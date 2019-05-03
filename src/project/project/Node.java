@@ -7,7 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 
 public class Node extends Application{
-	public void start(Stage stage) {
+	public void start2(Stage stage) {
 		AnchorPane root=new AnchorPane();
 		
 		
@@ -34,9 +34,9 @@ public class Node extends Application{
 		
 		root.getChildren().addAll(button1,button2,button3);
 		
-		Scene scene=new Scene(root,600,310);
+		Scene scene=new Scene(root,1400,700);
 		
-		stage.setTitle("�?ịnh luật Newtons");
+		stage.setTitle("Định luật Newtons");
 		stage.setScene(scene);
 		stage.show();
 		
@@ -44,5 +44,10 @@ public class Node extends Application{
 	}
 	public static void main(String[] args) {
 		launch(args);
+	}
+	@Override
+	public void start(Stage primaryStage) throws Exception {
+		// TODO Auto-generated method stub
+		
 	}
 }

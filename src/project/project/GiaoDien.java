@@ -8,6 +8,7 @@ import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import project.NoiDung;
 
 public class GiaoDien extends Application{
 	//private StackPane stackPane;
@@ -40,10 +41,23 @@ public class GiaoDien extends Application{
 			
 			button1.setOnAction(new EventHandler<ActionEvent>() {
 				public void handle(ActionEvent event) {
-					
+					NoiDung nd = new NoiDung();
+					nd.start1(primaryStage);
 				}
 			});
-			Scene scene=new Scene(root,600,310);
+			button2.setOnAction(new EventHandler<ActionEvent>() {
+				public void handle(ActionEvent event) {
+					NoiDung nd = new NoiDung();
+					nd.start1(primaryStage);
+				}
+			});
+			button3.setOnAction(new EventHandler<ActionEvent>() {
+				public void handle(ActionEvent event) {
+					NoiDung nd = new NoiDung();
+					nd.start1(primaryStage);
+				}
+			});
+			Scene scene=new Scene(root,1400,700);
 			
 			primaryStage.setTitle("Newtons laws");
 			primaryStage.setScene(scene);

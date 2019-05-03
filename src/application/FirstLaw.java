@@ -19,6 +19,9 @@ import javafx.util.Duration;
 
 public class FirstLaw extends Application{
 
+	public static final int HEIGHT=1200;
+	public static final int WIDTH=800;
+	
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		// TODO Auto-generated method stub
@@ -28,7 +31,8 @@ public class FirstLaw extends Application{
 		ImageView imageView = new ImageView(image);
 		imageView.setFitHeight(200);
 		imageView.setFitWidth(200);
-		imageView.setTranslateX(200);
+		imageView.setTranslateX(600);
+		imageView.setTranslateY(205);
 		imageView.setPreserveRatio(true);
 		
 		Circle cir = new Circle();
@@ -39,7 +43,7 @@ public class FirstLaw extends Application{
 		
 		TranslateTransition transition = new TranslateTransition();
 		transition.setDuration(Duration.millis(5000));
-		transition.setToX(600);
+		transition.setToX(1400);
 		transition.setAutoReverse(false);
 		transition.setCycleCount(Animation.INDEFINITE);
 		transition.setNode(cir);
@@ -50,9 +54,12 @@ public class FirstLaw extends Application{
 		root.setSpacing(50);
 		root.getChildren().addAll(imageView,cir,button);
 		
-		Scene scene = new Scene(root,600,600);
+		Scene scene = new Scene(root,1400,700);
 		primaryStage.setTitle("First law");
 		primaryStage.setScene(scene);
+		
+		//primaryStage.sizeToScene();
+		//primaryStage.setFullScreen(true);
 		primaryStage.show();
 		
 		button.setOnAction(new EventHandler<ActionEvent>() {

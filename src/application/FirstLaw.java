@@ -18,9 +18,6 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 
 public class FirstLaw extends Application{
-
-	public static final int HEIGHT=1200;
-	public static final int WIDTH=800;
 	
 	@Override
 	public void start(Stage primaryStage) throws Exception {

@@ -1,14 +1,19 @@
 package application;
 
+import java.io.InputStream;
+
 import javafx.animation.TranslateTransition;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.layout.VBox;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import javafx.scene.shape.Line;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -17,7 +22,7 @@ public class SecondLaw extends Application{
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		// TODO Auto-generated method stub
-		Circle cir = new Circle();
+		/*Circle cir = new Circle();
 		cir.setFill(Color.BLUEVIOLET);//set màu sắc
 		cir.setRadius(10);//set bán kính
 		cir.setLayoutX(50);
@@ -60,7 +65,33 @@ public class SecondLaw extends Application{
 				transition2.play();
 			}
 			
-		});
+		});*/
+		Line line1=new Line(50,50,1400,50);
+		line1.setStroke(Color.DARKGRAY);
+		line1.setStrokeWidth(15);
+		
+		Line line2=new Line(50,150,1400,150);
+		line2.setStroke(Color.DARKGRAY);
+		line2.setStrokeWidth(15);
+		
+		
+		String url="/application/car.jpg";
+		Class<?> clazz=this.getClass();
+		InputStream input=clazz.getResourceAsStream(url);
+		Image image=new Image(input);
+		ImageView imageView1=new ImageView(image);
+		imageView1.setFitHeight(200);
+		imageView1.setFitWidth(200);
+		
+		AnchorPane root=new AnchorPane();
+		
+		root.getChildren().addAll(line1,line2);
+		Scene scene=new Scene(root,1400,700);
+		
+		primaryStage.setTitle("Seconds Newtons Laws");
+		primaryStage.setScene(scene);
+		primaryStage.show();
+		
 	}
 	public static void main(String[] args) {
 		launch(args);

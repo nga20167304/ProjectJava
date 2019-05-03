@@ -46,22 +46,24 @@ public class ThirdLaw extends Application{
 		cir.setLayoutX(50);
 		cir.setLayoutY(50);
 		cir.setTranslateX(400);
+		cir.setTranslateY(200);
 		
 		TranslateTransition transition = new TranslateTransition();
 		transition.setDuration(Duration.millis(3000));
-		transition.setToY(337);
+		transition.setToX(1235);
 		transition.setAutoReverse(true);
 		transition.setCycleCount(Animation.INDEFINITE);
 		transition.setNode(cir);
 		
-		Line line=new Line(50,400,1300,400);
+		Line line=new Line(1300,50,1300,400);
 		line.setStroke(Color.DARKGRAY);
-		line.setStrokeWidth(10);
+		line.setStrokeWidth(20);
 		
 		Button button1 = new Button("Start");
 		button1.setPrefHeight(70);
 		button1.setPrefWidth(120);
-		AnchorPane.setTopAnchor(button1, 450.0);
+		
+		AnchorPane.setTopAnchor(button1, 400.0);
 		AnchorPane.setLeftAnchor(button1, 200.0);
 		button1.setStyle("-fx-font:18 arial");
 		button1.setGraphic(imageView1);
@@ -70,7 +72,7 @@ public class ThirdLaw extends Application{
 		Button button2 = new Button("Pause");
 		button2.setPrefHeight(70);
 		button2.setPrefWidth(120);
-		AnchorPane.setTopAnchor(button2, 450.0);
+		AnchorPane.setTopAnchor(button2, 400.0);
 		AnchorPane.setLeftAnchor(button2, 400.0);
 		button2.setStyle("-fx-font:18 arial");
 		button2.setGraphic(imageView2);

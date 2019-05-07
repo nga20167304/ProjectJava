@@ -42,15 +42,15 @@ public class ThirdLaw extends Application{
 		
 		Circle cir = new Circle();
 		cir.setFill(Color.BLUEVIOLET);//set màu sắc
-		cir.setRadius(10);//set bán kính
-		cir.setLayoutX(50);
-		cir.setLayoutY(50);
+		cir.setRadius(20);//set bán kính
+		cir.setLayoutX(80);
+		cir.setLayoutY(80);
 		cir.setTranslateX(400);
 		cir.setTranslateY(200);
 		
 		TranslateTransition transition = new TranslateTransition();
 		transition.setDuration(Duration.millis(3000));
-		transition.setToX(1235);
+		transition.setToX(1200);
 		transition.setAutoReverse(true);
 		transition.setCycleCount(Animation.INDEFINITE);
 		transition.setNode(cir);

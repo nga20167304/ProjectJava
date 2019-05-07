@@ -26,7 +26,8 @@ public class SecondLaw extends Application{
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		// TODO Auto-generated method stub
-
+		AnchorPane root=new AnchorPane();
+		
 		Line line1=new Line(100,100,1400,100);
 		line1.setStroke(Color.DARKGRAY);
 		line1.setStrokeWidth(15);
@@ -53,12 +54,13 @@ public class SecondLaw extends Application{
 		imageView2.setFitWidth(200);
 		imageView2.setTranslateX(70);
 		imageView2.setTranslateY(120);
+
 		
 		Arrow arrow1 = new Arrow(0,80,50,80);
 		Arrow arrow2 = new Arrow(0,180,50,180);
 		arrow2.setStrokeWidth(5);
 		
-		AnchorPane root=new AnchorPane();
+		
 		
 		Button button1=new Button("Start");
 		button1.setPrefHeight(70);
@@ -193,6 +195,8 @@ public class SecondLaw extends Application{
 		imageView4.setTranslateY(420);
 		
 		
+		
+		
 		HLineTo line_3=new HLineTo();
 		line_3.setX(1300);
 
@@ -241,7 +245,6 @@ public class SecondLaw extends Application{
 		
 		Arrow arrow3 = new Arrow(0,380,50,380);
 		Arrow arrow4 = new Arrow(0,480,50,480);
-		
 		
 		HLineTo line_3_1=new HLineTo();
 		line_3_1.setX(70);

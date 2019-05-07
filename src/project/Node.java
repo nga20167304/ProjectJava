@@ -1,49 +1,97 @@
 package project;
 
+import java.util.Optional;
+
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
+import project.Display;
+import secondLaw.SecondLaw;
+import thirdLaw.ThirdLaw;
 
 public class Node extends Application{
-	public void start2(Stage stage) {
+	public Stage primaryStage;
+	public void start1(Stage primaryStage) {
 		AnchorPane root=new AnchorPane();
 		
-		
-		Button button1=new Button("Bắt đầu");
-		button1.setPrefHeight(70);
-		AnchorPane.setTopAnchor(button1, 30.0);
-		AnchorPane.setLeftAnchor(button1, 200.0);
-		AnchorPane.setRightAnchor(button1, 200.0);
-		
-		
-		Button button2=new Button("Quay lại");
-		button2.setPrefHeight(70);
-		AnchorPane.setTopAnchor(button2, 120.0);
-		AnchorPane.setLeftAnchor(button2, 200.00);
-		AnchorPane.setRightAnchor(button2,200.0);
+		Button button1=new Button("Expression Content");
+		button1.setPrefHeight(120);
+		button1.setPrefWidth(120);
+		AnchorPane.setTopAnchor(button1, 100.0);
+		AnchorPane.setLeftAnchor(button1, 250.0);
+				
+		Button button2=new Button("Start");
+		button2.setPrefHeight(120);
+		button2.setPrefWidth(120);
+		AnchorPane.setTopAnchor(button2, 220.0);
+		AnchorPane.setLeftAnchor(button2, 450.0);
 		
 		
-		Button button3=new Button("Kết thúc");
-		button3.setPrefHeight(70);
-		AnchorPane.setTopAnchor(button3, 210.0);
-		AnchorPane.setLeftAnchor(button3, 200.0);
-		AnchorPane.setRightAnchor(button3, 200.0);
+		
+		Button button3=new Button("Back");
+		button3.setPrefHeight(120);
+		button3.setPrefWidth(120);
+		AnchorPane.setTopAnchor(button3, 340.0);
+		AnchorPane.setLeftAnchor(button3, 650.00);
 		
 		
-		root.getChildren().addAll(button1,button2,button3);
+		
+		Button button4=new Button("Exit");
+		button4.setPrefHeight(120);
+		button4.setPrefWidth(120);
+		AnchorPane.setTopAnchor(button4, 460.0);
+		AnchorPane.setLeftAnchor(button4, 850.0);
+		
+		
+		
+		button3.setOnAction(new EventHandler<ActionEvent>(){
+			public void handle(ActionEvent event) {
+				Display dp=new Display();
+				try {
+					dp.start(primaryStage);
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		});
+		
+		button4.setOnAction(new EventHandler<ActionEvent>() {
+			public void handle(ActionEvent event) {
+				showConfirmation();
+			}
+		});
+		root.getChildren().addAll(button1,button2,button3,button4);
 		
 		Scene scene=new Scene(root,1400,700);
 		
-		stage.setTitle("Định luật Newtons");
-		stage.setScene(scene);
-		stage.show();
+		primaryStage.setTitle("Newton's Law");
+		primaryStage.setScene(scene);
+		primaryStage.show();
 		
 		
 	}
-	public static void main(String[] args) {
-		launch(args);
+	private void showConfirmation() {
+		Alert alert=new Alert(AlertType.CONFIRMATION);
+		alert.setTitle("Confirm Exit");
+		alert.setHeaderText("Are you sure want to exit?");
+		alert.setContentText("My Application");
+		 
+		Optional<ButtonType> option=alert.showAndWait();
+		
+		 if (option.get() == ButtonType.OK) {
+	        	System.exit(0);
+	        } else if (option.get() == ButtonType.CANCEL) {
+	        	Node node = new Node();
+				node.start1(primaryStage);
+	        }
 	}
 	@Override
 	public void start(Stage primaryStage) throws Exception {

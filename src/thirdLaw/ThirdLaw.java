@@ -2,7 +2,7 @@ package thirdLaw;
 
 import java.io.InputStream;
 
-import javafx.animation.Animation;
+
 import javafx.animation.TranslateTransition;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -52,7 +52,7 @@ public class ThirdLaw extends Application{
 		transition.setDuration(Duration.millis(3000));
 		transition.setToX(1200);
 		transition.setAutoReverse(true);
-		transition.setCycleCount(Animation.INDEFINITE);
+		transition.setCycleCount(2);
 		transition.setNode(cir);
 		
 		Line line=new Line(1300,50,1300,400);

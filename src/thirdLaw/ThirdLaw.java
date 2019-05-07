@@ -1,4 +1,4 @@
-package application;
+package thirdLaw;
 
 import java.io.InputStream;
 

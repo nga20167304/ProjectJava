@@ -1,4 +1,4 @@
-package application;
+package secondLaw;
 
 
 import javafx.scene.paint.Color;

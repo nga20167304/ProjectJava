@@ -1,4 +1,4 @@
-package application;
+package secondLaw;
 
 import java.io.InputStream;
 
@@ -18,7 +18,7 @@ import javafx.scene.shape.MoveTo;
 import javafx.scene.shape.Path;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import application.Arrow;
+import secondLaw.Arrow;
 
 
 public class SecondLaw extends Application{

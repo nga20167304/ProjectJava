@@ -142,6 +142,7 @@ public class SecondLaw extends Application{
 		pathT2_1.setNode(arrow2);
 		pathT2_1.setOrientation(PathTransition.OrientationType.ORTHOGONAL_TO_TANGENT);
 		
+		
 		button1.setOnAction(new EventHandler<ActionEvent>() {
 
 			@Override
@@ -151,10 +152,19 @@ public class SecondLaw extends Application{
 				//pathT2.play();
 				pathT1_1.play();
 				pathT2_1.play();
+				button1.setOnAction(new EventHandler<ActionEvent>() {
+
+					@Override
+					public void handle(ActionEvent event) {
+						// TODO Auto-generated method stub
+						pathT1.play();	
+						pathT2.play();
+					}
+					
+				});
 			}
 			
 		});
-		
 		
 		
 		Line line3=new Line(100,400,1400,400);
@@ -278,8 +288,17 @@ public class SecondLaw extends Application{
 				// TODO Auto-generated method stub
 				pathT3_1.play();
 				pathT4_1.play();
-				pathT3.play();	
-				pathT4.play();
+				button2.setOnAction(new EventHandler<ActionEvent>() {
+
+					@Override
+					public void handle(ActionEvent event) {
+						// TODO Auto-generated method stub
+						pathT3.play();	
+						pathT4.play();
+					}
+					
+				});
+				
 				
 			}
 			

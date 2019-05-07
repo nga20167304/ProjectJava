@@ -36,7 +36,7 @@ public class SecondLaw extends Application{
 		line2.setStrokeWidth(15);
 		
 		
-		String url="/application/car.png";
+		String url="/secondLaw/car.png";
 		Class<?> clazz=this.getClass();
 		InputStream input1=clazz.getResourceAsStream(url);
 		Image image1=new Image(input1);
@@ -46,7 +46,7 @@ public class SecondLaw extends Application{
 		imageView1.setTranslateX(70);
 		imageView1.setTranslateY(20);
 		
-		InputStream input2=getClass().getResourceAsStream("/application/car.png");
+		InputStream input2=getClass().getResourceAsStream("/secondLaw/car.png");
 		Image image2=new Image(input2);
 		ImageView imageView2=new ImageView(image2);
 		imageView2.setFitHeight(100);
@@ -176,7 +176,7 @@ public class SecondLaw extends Application{
 		line4.setStrokeWidth(15);
 		
 		
-		InputStream input3=getClass().getResourceAsStream("/application/car.png");
+		InputStream input3=getClass().getResourceAsStream("/secondLaw/car.png");
 		Image image3=new Image(input3);
 		ImageView imageView3=new ImageView(image3);
 		imageView3.setFitHeight(100);
@@ -184,7 +184,7 @@ public class SecondLaw extends Application{
 		imageView3.setTranslateX(70);
 		imageView3.setTranslateY(320);
 		
-		InputStream input4=getClass().getResourceAsStream("/application/car2.png");
+		InputStream input4=getClass().getResourceAsStream("/secondLaw/car2.png");
 		Image image4=new Image(input4);
 		ImageView imageView4=new ImageView(image4);
 		imageView4.setFitHeight(80);

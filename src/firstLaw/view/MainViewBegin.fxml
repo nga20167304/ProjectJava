@@ -20,7 +20,7 @@
                            <children>
                               <ImageView fitHeight="195.0" fitWidth="294.0" layoutX="50.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../../../../Desktop/Newton'sLawProj/ProjectJava/bin/application/table.png" />
+                                    <Image url="@../../../../../Desktop/ProjectJava/bin/application/table.png" />
                                  </image>
                               </ImageView>
                               <Circle fill="DODGERBLUE" layoutX="90.0" layoutY="58.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />

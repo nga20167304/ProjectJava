@@ -23,7 +23,7 @@ public class ThirdLaw extends Application{
 		
 		AnchorPane root=new AnchorPane();
 		
-		InputStream input1=getClass().getResourceAsStream("/application/start.jpg");
+		InputStream input1=getClass().getResourceAsStream("/thirdLaw/start.jpg");
 		Image image1=new Image(input1);
 		ImageView imageView1=new ImageView(image1);
 		imageView1.setFitHeight(30);
@@ -31,7 +31,7 @@ public class ThirdLaw extends Application{
 		imageView1.setCache(true);
 		imageView1.setPreserveRatio(true);
 		
-		InputStream input2=getClass().getResourceAsStream("/application/pause.jpg");
+		InputStream input2=getClass().getResourceAsStream("/thirdLaw/pause.jpg");
 		Image image2=new Image(input2);
 		ImageView imageView2=new ImageView(image2);
 		imageView2.setFitHeight(30);

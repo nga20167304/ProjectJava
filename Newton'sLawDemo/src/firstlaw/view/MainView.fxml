@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="firstlaw.view.MainController">
+   <bottom>
+      <SplitPane dividerPositions="0.036585365853658534" orientation="VERTICAL" prefHeight="84.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Button layoutX="457.0" layoutY="16.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="82.0" text="Exit" />
+                  <Button layoutX="56.0" layoutY="16.0" mnemonicParsing="false" onAction="#goView1" prefHeight="44.0" prefWidth="82.0" text="Start" />
+                  <Button layoutX="255.0" layoutY="16.0" mnemonicParsing="false" onAction="#goView1" prefHeight="44.0" prefWidth="82.0" text="Replay" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </bottom>
+</BorderPane>

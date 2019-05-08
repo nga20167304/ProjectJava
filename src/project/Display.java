@@ -53,14 +53,14 @@ public class Display extends Application{
 			});
 			button2.setOnAction(new EventHandler<ActionEvent>() {
 				public void handle(ActionEvent event) {
-					Node1 node = new Node1();
-					node.start1(primaryStage);
+					Node2 node = new Node2();
+					node.start2(primaryStage);
 				}
 			});
 			button3.setOnAction(new EventHandler<ActionEvent>() {
 				public void handle(ActionEvent event) {
-					Node1 node = new Node1();
-					node.start1(primaryStage);
+					Node3 node = new Node3();
+					node.start3(primaryStage);
 				}
 			});
 			Scene scene=new Scene(root,1400,700);

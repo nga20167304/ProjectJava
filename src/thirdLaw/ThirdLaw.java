@@ -19,7 +19,7 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 
 public class ThirdLaw extends Application{
-	public void start(Stage primaryStage) {
+	public void thirdLaw(Stage primaryStage) {
 		
 		AnchorPane root=new AnchorPane();
 		
@@ -106,8 +106,12 @@ public class ThirdLaw extends Application{
 		});
 		
 	}
-	
-	public static void main(String[] args) {
-		launch(args);
+
+	@Override
+	public void start(Stage primaryStage) throws Exception {
+		// TODO Auto-generated method stub
+		
 	}
+	
+	
 }

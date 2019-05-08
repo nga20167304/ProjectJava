@@ -8,7 +8,7 @@ import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import project.Node;
+import project.Node1;
 
 public class Display extends Application{
 	
@@ -47,19 +47,19 @@ public class Display extends Application{
 			
 			button1.setOnAction(new EventHandler<ActionEvent>() {
 				public void handle(ActionEvent event) {
-					Node node = new Node();
+					Node1 node = new Node1();
 					node.start1(primaryStage);
 				}
 			});
 			button2.setOnAction(new EventHandler<ActionEvent>() {
 				public void handle(ActionEvent event) {
-					Node node = new Node();
+					Node1 node = new Node1();
 					node.start1(primaryStage);
 				}
 			});
 			button3.setOnAction(new EventHandler<ActionEvent>() {
 				public void handle(ActionEvent event) {
-					Node node = new Node();
+					Node1 node = new Node1();
 					node.start1(primaryStage);
 				}
 			});

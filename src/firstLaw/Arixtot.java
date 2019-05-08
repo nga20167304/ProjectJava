@@ -19,7 +19,7 @@ import firstLaw.Galile;
 
 public class Arixtot extends Application{
 	
-	public void start(Stage primaryStage) throws Exception {
+	public void TN_Arixtot(Stage primaryStage) throws Exception {
 		// TODO Auto-generated method stub
 		Class<?> clazz = this.getClass();
 		InputStream input = clazz.getResourceAsStream("/application/table.png");
@@ -91,7 +91,11 @@ public class Arixtot extends Application{
 			
 		});
 	}
-	public static void main(String[] args) {
-		launch(args);
+
+	@Override
+	public void start(Stage primaryStage) throws Exception {
+		// TODO Auto-generated method stub
+		
 	}
+	
 }

@@ -23,8 +23,7 @@ import secondLaw.Arrow;
 
 public class SecondLaw extends Application{
 
-	@Override
-	public void start(Stage primaryStage) throws Exception {
+	public void secondLaw(Stage primaryStage) throws Exception {
 		// TODO Auto-generated method stub
 		AnchorPane root=new AnchorPane();
 		
@@ -316,7 +315,9 @@ public class SecondLaw extends Application{
 		primaryStage.show();
 		
 	}
-	public static void main(String[] args) {
-		launch(args);
+	@Override
+	public void start(Stage primaryStage) throws Exception {
+		// TODO Auto-generated method stub
+		
 	}
 }

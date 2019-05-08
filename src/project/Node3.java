@@ -13,12 +13,11 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import project.Display;
-import secondLaw.SecondLaw;
 import thirdLaw.ThirdLaw;
 
-public class Node extends Application{
+public class Node3 extends Application{
 	public Stage primaryStage;
-	public void start1(Stage primaryStage) {
+	public void start3(Stage primaryStage) {
 		AnchorPane root=new AnchorPane();
 		
 		Button button1=new Button("Expression Content");
@@ -50,6 +49,17 @@ public class Node extends Application{
 		AnchorPane.setLeftAnchor(button4, 850.0);
 		
 		
+		button2.setOnAction(new EventHandler<ActionEvent>(){
+			public void handle(ActionEvent event) {
+				ThirdLaw thirdLaw=new ThirdLaw();
+				try {
+					thirdLaw.thirdLaw(primaryStage);
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		});
 		
 		button3.setOnAction(new EventHandler<ActionEvent>(){
 			public void handle(ActionEvent event) {
@@ -89,7 +99,7 @@ public class Node extends Application{
 		 if (option.get() == ButtonType.OK) {
 	        	System.exit(0);
 	        } else if (option.get() == ButtonType.CANCEL) {
-	        	Node node = new Node();
+	        	Node1 node = new Node1();
 				node.start1(primaryStage);
 	        }
 	}

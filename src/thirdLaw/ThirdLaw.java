@@ -41,8 +41,8 @@ public class ThirdLaw extends Application{
 		
 		
 		Circle cir = new Circle();
-		cir.setFill(Color.BLUEVIOLET);//set màu sắc
-		cir.setRadius(20);//set bán kính
+		cir.setFill(Color.BLUEVIOLET);
+		cir.setRadius(20);
 		cir.setLayoutX(80);
 		cir.setLayoutY(80);
 		cir.setTranslateX(400);

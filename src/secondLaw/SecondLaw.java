@@ -150,8 +150,7 @@ public class SecondLaw extends Application{
 			@Override
 			public void handle(ActionEvent event) {
 				// TODO Auto-generated method stub
-				//pathT1.play();	
-				//pathT2.play();
+				
 				pathT1_1.play();
 				pathT2_1.play();
 				button1.setOnAction(new EventHandler<ActionEvent>() {

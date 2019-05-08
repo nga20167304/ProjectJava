@@ -1,8 +1,7 @@
-package application;
+package firstLaw;
 
 import java.io.InputStream;
 
-import javafx.animation.Animation;
 import javafx.animation.TranslateTransition;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -11,15 +10,15 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import firstLaw.Galile;
 
-public class FirstLaw extends Application{
+public class Arixtot extends Application{
 	
-	@Override
 	public void start(Stage primaryStage) throws Exception {
 		// TODO Auto-generated method stub
 		Class<?> clazz = this.getClass();
@@ -29,27 +28,39 @@ public class FirstLaw extends Application{
 		imageView.setFitHeight(300);
 		imageView.setFitWidth(300);
 		imageView.setTranslateX(500);
-		imageView.setTranslateY(185);
+		imageView.setTranslateY(130);
 		imageView.setPreserveRatio(true);
 		
 		Circle cir = new Circle();
-		cir.setFill(Color.BLUEVIOLET);//set màu sắc
-		cir.setRadius(10);//set bán kính
+		cir.setFill(Color.BLUEVIOLET);
+		cir.setRadius(10);
 		cir.setLayoutX(50);
 		cir.setLayoutY(50);
+		cir.setTranslateX(500);
+		cir.setTranslateY(185);
 		
 		TranslateTransition transition = new TranslateTransition();
-		transition.setDuration(Duration.millis(5000));
-		transition.setToX(1400);
-		transition.setAutoReverse(false);
-		transition.setCycleCount(Animation.INDEFINITE);
+		transition.setDuration(Duration.millis(2500));
+		transition.setToX(700);
 		transition.setNode(cir);
 		
-		Button button = new Button("Start");
+		Button button1 = new Button("Start");
+		button1.setPrefHeight(100);
+		button1.setPrefWidth(100);
+		AnchorPane.setTopAnchor(button1, 450.0);
+		AnchorPane.setLeftAnchor(button1, 500.0);
+		button1.setStyle("-fx-font:20 arial");
 		
-		VBox root = new VBox();
-		root.setSpacing(50);
-		root.getChildren().addAll(imageView,cir,button);
+		Button button2 = new Button("Next");
+		button2.setPrefHeight(100);
+		button2.setPrefWidth(100);
+		AnchorPane.setTopAnchor(button2, 450.0);
+		AnchorPane.setLeftAnchor(button2, 700.0);
+		button2.setStyle("-fx-font:20 arial");
+		
+		AnchorPane root=new AnchorPane();
+		
+		root.getChildren().addAll(imageView,cir,button1,button2);
 		
 		Scene scene = new Scene(root,1400,700);
 		primaryStage.setTitle("First law");
@@ -59,12 +70,23 @@ public class FirstLaw extends Application{
 		//primaryStage.setFullScreen(true);
 		primaryStage.show();
 		
-		button.setOnAction(new EventHandler<ActionEvent>() {
+		button1.setOnAction(new EventHandler<ActionEvent>() {
 
 			@Override
 			public void handle(ActionEvent event) {
 				// TODO Auto-generated method stub
 				transition.play();				
+			}
+			
+		});
+		
+		button2.setOnAction(new EventHandler<ActionEvent>() {
+
+			@Override
+			public void handle(ActionEvent event) {
+				// TODO Auto-generated method stub
+				Galile galileo=new Galile();	
+				galileo.Galileo(primaryStage);
 			}
 			
 		});

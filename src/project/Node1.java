@@ -65,7 +65,7 @@ public class Node1 extends Application{
 			public void handle(ActionEvent event) {
 				Display dp=new Display();
 				try {
-					dp.start(primaryStage);
+					dp.display(primaryStage);
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();

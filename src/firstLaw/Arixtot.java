@@ -16,6 +16,7 @@ import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import firstLaw.Galile;
+import project.Node1;
 
 public class Arixtot extends Application{
 	
@@ -48,19 +49,26 @@ public class Arixtot extends Application{
 		button1.setPrefHeight(100);
 		button1.setPrefWidth(100);
 		AnchorPane.setTopAnchor(button1, 450.0);
-		AnchorPane.setLeftAnchor(button1, 500.0);
+		AnchorPane.setLeftAnchor(button1, 400.0);
 		button1.setStyle("-fx-font:20 arial");
 		
 		Button button2 = new Button("Next");
 		button2.setPrefHeight(100);
 		button2.setPrefWidth(100);
 		AnchorPane.setTopAnchor(button2, 450.0);
-		AnchorPane.setLeftAnchor(button2, 700.0);
+		AnchorPane.setLeftAnchor(button2, 600.0);
 		button2.setStyle("-fx-font:20 arial");
+		
+		Button button3 = new Button("Back");
+		button3.setPrefHeight(100);
+		button3.setPrefWidth(100);
+		AnchorPane.setTopAnchor(button3, 450.0);
+		AnchorPane.setLeftAnchor(button3, 800.0);
+		button3.setStyle("-fx-font:20 arial");
 		
 		AnchorPane root=new AnchorPane();
 		
-		root.getChildren().addAll(imageView,cir,button1,button2);
+		root.getChildren().addAll(imageView,cir,button1,button2,button3);
 		
 		Scene scene = new Scene(root,1400,700);
 		primaryStage.setTitle("First law");
@@ -87,6 +95,15 @@ public class Arixtot extends Application{
 				// TODO Auto-generated method stub
 				Galile galileo=new Galile();	
 				galileo.Galileo(primaryStage);
+			}
+			
+		});
+		button3.setOnAction(new EventHandler<ActionEvent>() {
+
+			@Override
+			public void handle(ActionEvent event) {
+				Node1 node=new Node1();
+				node.start1(primaryStage);
 			}
 			
 		});

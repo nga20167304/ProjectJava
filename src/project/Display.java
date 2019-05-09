@@ -12,7 +12,7 @@ import project.Node1;
 
 public class Display extends Application{
 	
-		public void start(Stage primaryStage) throws Exception{
+		public void display(Stage primaryStage) throws Exception{
 			AnchorPane root=new AnchorPane();
 
 			//Button 1
@@ -72,7 +72,9 @@ public class Display extends Application{
 			
 		}
 		
-		public static void main(String[] args) {
-			launch(args);
+		@Override
+		public void start(Stage arg0) throws Exception {
+			// TODO Auto-generated method stub
+			
 		}
 }

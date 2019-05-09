@@ -17,6 +17,7 @@ import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import project.Node3;
 
 public class ThirdLaw extends Application{
 	public void thirdLaw(Stage primaryStage) {
@@ -77,13 +78,13 @@ public class ThirdLaw extends Application{
 		button2.setStyle("-fx-font:18 arial");
 		button2.setGraphic(imageView2);
 		
-		root.getChildren().addAll(cir,line,button1,button2);
+		Button button3=new Button("Back");
+		button3.setPrefHeight(70);
+		button3.setPrefWidth(120);
 		
-	
-		Scene scene=new Scene(root,1400,700);
-		primaryStage.setTitle("Third Newton Law");
-		primaryStage.setScene(scene);
-		primaryStage.show();
+		AnchorPane.setTopAnchor(button3, 400.0);
+		AnchorPane.setLeftAnchor(button3, 600.0);
+		button3.setStyle("-fx-font:18 arial");
 		
 		button1.setOnAction(new EventHandler<ActionEvent>() {
 
@@ -104,6 +105,22 @@ public class ThirdLaw extends Application{
 			}
 			
 		});
+		button3.setOnAction(new EventHandler<ActionEvent>() {
+			public void handle(ActionEvent event) {
+				Node3 node=new Node3();
+				node.start3(primaryStage);
+			}
+		});
+		
+		
+		
+		root.getChildren().addAll(cir,line,button1,button2,button3);
+		
+		
+		Scene scene=new Scene(root,1400,700);
+		primaryStage.setTitle("Third Newton Law");
+		primaryStage.setScene(scene);
+		primaryStage.show();
 		
 	}
 

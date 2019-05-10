@@ -5,9 +5,11 @@ import java.io.InputStream;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -16,13 +18,8 @@ public class ContentFirstLaw extends Application{
 	private static final String CONTENT = "Nếu một vật không chịu tác dụng của lực nào hoặc chịu tác dụng của các lực có hợp lực bằng không thì nó giữ nguyên trạng thái đứng yên hoặc chuyển động thẳng đều.";
 	private static final String CT = "CÔNG THỨC :";
 	private static final Image IMAGE = new Image("https://studiousguy.com/wp-content/uploads/2018/09/Newtons-Laws.jpg");
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		launch(args);
-	}
-
-	@Override
-	public void start(final Stage stage) throws Exception {
+	
+	public void content1(final Stage stage) throws Exception {
 		// TODO Auto-generated method stub
 		Label label1 = new Label(CONTENT);
 		label1.setWrapText(true);
@@ -44,14 +41,29 @@ public class ContentFirstLaw extends Application{
 		ImageView image = new ImageView(IMAGE);
 		image.setOpacity(0.3);//set độ mò của ảnh
 		
+		Button button=new Button("Back");
+		button.setPrefHeight(120);
+		button.setPrefWidth(120);
+		
 		StackPane layout = new StackPane();
 		layout.setStyle("-fx-padding: 10;");
-		layout.getChildren().setAll(image, root);
+		layout.getChildren().setAll(image, root, button);
+		
+		
+		
+	//	AnchorPane.setTopAnchor(button, 340.0);
+	//	AnchorPane.setLeftAnchor(button, 650.00);
 		
 		Scene scene = new Scene(layout,1400,700);
 		stage.setTitle("Content of first law");
 		stage.setScene(scene);
 		stage.show();
+	}
+
+	@Override
+	public void start(Stage arg0) throws Exception {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

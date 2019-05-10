@@ -1,6 +1,8 @@
 package project;
 
+
 import java.util.Optional;
+
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -14,11 +16,13 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import project.Display;
 import secondLaw.SecondLaw;
+import secondLaw.ContentSecondLaw;
 
 public class Node2 extends Application{
 	public Stage primaryStage;
 	public void start2(Stage primaryStage) {
 		AnchorPane root=new AnchorPane();
+		root.setId("newtons2");
 		
 		Button button1=new Button("Expression Content");
 		button1.setPrefHeight(120);
@@ -48,7 +52,16 @@ public class Node2 extends Application{
 		AnchorPane.setTopAnchor(button4, 460.0);
 		AnchorPane.setLeftAnchor(button4, 850.0);
 		
-		
+		button1.setOnAction(new EventHandler<ActionEvent>() {
+			public void handle(ActionEvent event) {
+				ContentSecondLaw content2=new ContentSecondLaw();
+				try {
+					content2.content2(primaryStage);
+				}catch(Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
 		button2.setOnAction(new EventHandler<ActionEvent>(){
 			public void handle(ActionEvent event) {
 				SecondLaw secondLaw=new SecondLaw();
@@ -78,11 +91,25 @@ public class Node2 extends Application{
 				showConfirmation();
 			}
 		});
+		
+		/*InputStream input=getClass().getResourceAsStream("/application/newton2.jpg");
+		Image image=new Image(input);
+		ImageView imageView=new ImageView(image);
+		imageView.setFitHeight(150);
+		imageView.setFitWidth(1200);
+		imageView.setTranslateX(90);
+		imageView.setTranslateY(190);
+		imageView.setOpacity(0.3);
+		root.getChildren().add(imageView);*/
+
+		
 		root.getChildren().addAll(button1,button2,button3,button4);
-		
 		Scene scene=new Scene(root,1400,700);
+		scene.getStylesheets().addAll(this.getClass().getResource("/application/style.css").toExternalForm());
 		
-		primaryStage.setTitle("Newton's Law");
+		
+		
+		primaryStage.setTitle("Newton's 2nd Law");
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		

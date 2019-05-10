@@ -18,13 +18,9 @@ public class ContentSecondLaw extends Application{
 	private static final String CT = "CÔNG THỨC :";
 	private static final Image IMAGE = new Image("https://studiousguy.com/wp-content/uploads/2018/09/Newtons-Laws.jpg");
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		launch(args);
-	}
 
-	@Override
-	public void start(Stage stage) throws Exception {
+
+	public void content2(Stage stage) throws Exception {
 		// TODO Auto-generated method stub
 		Label label1 = new Label(CONTENT);
 		label1.setWrapText(true);
@@ -58,6 +54,14 @@ public class ContentSecondLaw extends Application{
 		stage.setTitle("Content of second law");
 		stage.setScene(scene);
 		stage.show();
+	}
+
+
+
+	@Override
+	public void start(Stage primaryStage) throws Exception {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

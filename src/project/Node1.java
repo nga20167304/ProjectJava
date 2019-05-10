@@ -14,11 +14,13 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import project.Display;
 import firstLaw.Arixtot;
+import firstLaw.ContentFirstLaw;
 
 public class Node1 extends Application{
 	public Stage primaryStage;
 	public void start1(Stage primaryStage) {
 		AnchorPane root=new AnchorPane();
+		root.setId("newtons1");
 		
 		Button button1=new Button("Expression Content");
 		button1.setPrefHeight(120);
@@ -48,7 +50,16 @@ public class Node1 extends Application{
 		AnchorPane.setTopAnchor(button4, 460.0);
 		AnchorPane.setLeftAnchor(button4, 850.0);
 		
-		
+		button1.setOnAction(new EventHandler<ActionEvent>() {
+			public void handle(ActionEvent event) {
+				ContentFirstLaw content1=new ContentFirstLaw();
+				try {
+					content1.content1(primaryStage);
+				}catch(Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
 		button2.setOnAction(new EventHandler<ActionEvent>(){
 			public void handle(ActionEvent event) {
 				Arixtot arixtot=new Arixtot();
@@ -78,11 +89,24 @@ public class Node1 extends Application{
 				showConfirmation();
 			}
 		});
+		
+		/*InputStream input=getClass().getResourceAsStream("/application/newton1.jpg");
+		Image image=new Image(input);
+		ImageView imageView=new ImageView(image);
+		imageView.setFitHeight(150);
+		imageView.setFitWidth(1200);
+		imageView.setTranslateX(90);
+		imageView.setTranslateY(190);
+		imageView.setOpacity(0.3);
+		root.getChildren().add(imageView);*/
+		
 		root.getChildren().addAll(button1,button2,button3,button4);
 		
-		Scene scene=new Scene(root,1400,700);
 		
-		primaryStage.setTitle("Newton's Law");
+		Scene scene=new Scene(root,1400,700);
+		scene.getStylesheets().addAll(this.getClass().getResource("/application/style.css").toExternalForm());
+		
+		primaryStage.setTitle("Newton's 1st Law");
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		

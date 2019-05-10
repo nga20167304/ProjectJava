@@ -11,8 +11,11 @@ import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextBoundsType;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import firstLaw.Galile;
@@ -107,6 +110,14 @@ public class Arixtot extends Application{
 			}
 			
 		});
+	}
+	
+	public void setText() {
+		Circle circle = new Circle();
+		Text text = new Text("");
+		text.setBoundsType(TextBoundsType.VISUAL);
+		StackPane stack = new StackPane();
+		stack.getChildren().addAll(circle, text);
 	}
 
 	@Override

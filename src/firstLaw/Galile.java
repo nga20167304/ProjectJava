@@ -144,7 +144,7 @@ public class Galile extends Application{
 		
 		TranslateTransition transition3 = new TranslateTransition();
 		transition3.setDuration(Duration.millis(3000));
-		transition3.setToX(1200);
+		transition3.setToX(1400);
 		transition3.setNode(cir3);
 		
 		
@@ -153,7 +153,7 @@ public class Galile extends Application{
 		line3.setY(380);
 		
 		HLineTo line3_1=new HLineTo();
-		line3_1.setX(1200);
+		line3_1.setX(1400);
 		
 		MoveTo move3=new MoveTo();
 		move3.setX(80);
@@ -210,24 +210,16 @@ public class Galile extends Application{
 		button1.setOnAction(new EventHandler<ActionEvent>() {
 			public void handle(ActionEvent event) {
 				pathT1.play();
+				pathT2.play();
+				pathT3.play();
 			}
 		});
 		
 		button2.setOnAction(new EventHandler<ActionEvent>() {
 			public void handle(ActionEvent event) {
-				pathT2.play();
-				button2.setOnAction(new EventHandler<ActionEvent>() {
-					public void handle(ActionEvent event) {
-						pathT3.play();
-						button2.setOnAction(new EventHandler<ActionEvent>() {
-							public void handle(ActionEvent event) {
 								Newtons newtons=new Newtons();
 								newtons.NewtonsLaw(primaryStage);
 							}
-						});
-					}
-				});
-			}
 		});
 		
 		

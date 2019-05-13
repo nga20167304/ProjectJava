@@ -1,7 +1,5 @@
 package thirdLaw;
 
-import java.io.InputStream;
-
 
 import javafx.animation.TranslateTransition;
 import javafx.application.Application;
@@ -21,26 +19,10 @@ import project.Display;
 import project.Node3;
 
 public class ThirdLaw extends Application{
+	private static final Image IMAGE = new Image("/application/NewtonsLaws.jpg");
 	public void thirdLaw(Stage primaryStage) {
 		
 		AnchorPane root=new AnchorPane();
-		
-		InputStream input1=getClass().getResourceAsStream("/thirdLaw/start.jpg");
-		Image image1=new Image(input1);
-		ImageView imageView1=new ImageView(image1);
-		imageView1.setFitHeight(30);
-		imageView1.setFitWidth(30);
-		imageView1.setCache(true);
-		imageView1.setPreserveRatio(true);
-		
-		InputStream input2=getClass().getResourceAsStream("/thirdLaw/pause.jpg");
-		Image image2=new Image(input2);
-		ImageView imageView2=new ImageView(image2);
-		imageView2.setFitHeight(30);
-		imageView2.setFitWidth(30);
-		imageView2.setCache(true);
-		imageView2.setPreserveRatio(true);
-		
 		
 		Circle cir = new Circle();
 		cir.setFill(Color.BLUEVIOLET);
@@ -52,7 +34,7 @@ public class ThirdLaw extends Application{
 		
 		TranslateTransition transition = new TranslateTransition();
 		transition.setDuration(Duration.millis(3000));
-		transition.setToX(1200);
+		transition.setToX(1195);
 		transition.setAutoReverse(true);
 		transition.setCycleCount(2);
 		transition.setNode(cir);
@@ -65,35 +47,43 @@ public class ThirdLaw extends Application{
 		button1.setPrefHeight(70);
 		button1.setPrefWidth(120);
 		
-		AnchorPane.setTopAnchor(button1, 400.0);
+		AnchorPane.setTopAnchor(button1, 600.0);
 		AnchorPane.setLeftAnchor(button1, 200.0);
 		button1.setStyle("-fx-font:18 arial");
-		button1.setGraphic(imageView1);
+		
 		
 		
 		Button button2 = new Button("Pause");
 		button2.setPrefHeight(70);
 		button2.setPrefWidth(120);
-		AnchorPane.setTopAnchor(button2, 400.0);
+		AnchorPane.setTopAnchor(button2, 600.0);
 		AnchorPane.setLeftAnchor(button2, 400.0);
 		button2.setStyle("-fx-font:18 arial");
-		button2.setGraphic(imageView2);
+		
 		
 		Button button3=new Button("Back");
 		button3.setPrefHeight(70);
 		button3.setPrefWidth(120);
 		
-		AnchorPane.setTopAnchor(button3, 400.0);
+		AnchorPane.setTopAnchor(button3, 600.0);
 		AnchorPane.setLeftAnchor(button3, 600.0);
 		button3.setStyle("-fx-font:18 arial");
 		
 		
 		Button button4=new Button("Menu");
-		button4.setPrefHeight(100);
-		button4.setPrefWidth(100);
-		AnchorPane.setTopAnchor(button4, 400.0);
-		AnchorPane.setLeftAnchor(button4, 1000.0);
+		button4.setPrefHeight(70);
+		button4.setPrefWidth(120);
+		AnchorPane.setTopAnchor(button4, 600.0);
+		AnchorPane.setLeftAnchor(button4, 800.0);
 		button4.setStyle("-fx-font:20 arial");
+		
+		Line line1=new Line(0,550,1400,550);
+		line1.setStroke(Color.DARKGRAY);
+		
+		ImageView image = new ImageView(IMAGE);
+		image.setOpacity(0.3);//set độ mò của ảnh
+		image.setTranslateX(300);
+		
 		
 		button1.setOnAction(new EventHandler<ActionEvent>() {
 
@@ -133,7 +123,9 @@ public class ThirdLaw extends Application{
 			}
 		});
 		
-		root.getChildren().addAll(cir,line,button1,button2,button3,button4);
+		
+		root.getChildren().addAll(cir,line,button1,button2,button3,button4,line1,image);
+			
 		
 		
 		Scene scene=new Scene(root,1400,700);

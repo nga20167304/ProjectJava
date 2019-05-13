@@ -24,7 +24,7 @@ import secondLaw.Arrow;
 
 
 public class SecondLaw extends Application{
-
+	private static final Image IMAGE = new Image("/application/NewtonsLaws.jpg");
 	public void secondLaw(Stage primaryStage) throws Exception {
 		// TODO Auto-generated method stub
 		AnchorPane root=new AnchorPane();
@@ -63,7 +63,7 @@ public class SecondLaw extends Application{
 		
 		
 		
-		Button button1=new Button("Start");
+		Button button1=new Button("Start1");
 		button1.setPrefHeight(70);
 		button1.setPrefWidth(120);
 		
@@ -235,7 +235,7 @@ public class SecondLaw extends Application{
 		
 		
 		
-		Button button2=new Button("Next");
+		Button button2=new Button("Start2");
 		button2.setPrefHeight(70);
 		button2.setPrefWidth(120);
 		
@@ -306,6 +306,9 @@ public class SecondLaw extends Application{
 			}
 			
 		});
+		ImageView image = new ImageView(IMAGE);
+		image.setOpacity(0.3);
+		image.setTranslateX(300);
 		
 		Button button3=new Button("Back");
 		button3.setPrefHeight(70);
@@ -316,10 +319,10 @@ public class SecondLaw extends Application{
 		button3.setStyle("-fx-font:18 arial");
 		
 		Button button4=new Button("Menu");
-		button4.setPrefHeight(100);
-		button4.setPrefWidth(100);
+		button4.setPrefHeight(70);
+		button4.setPrefWidth(120);
 		AnchorPane.setTopAnchor(button4, 250.0);
-		AnchorPane.setLeftAnchor(button4, 1000.0);
+		AnchorPane.setLeftAnchor(button4, 800.0);
 		button4.setStyle("-fx-font:20 arial");
 		
 		button3.setOnAction(new EventHandler<ActionEvent>() {

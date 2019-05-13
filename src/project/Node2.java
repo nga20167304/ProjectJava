@@ -25,32 +25,34 @@ public class Node2 extends Application{
 		root.setId("newtons2");
 		
 		Button button1=new Button("Expression Content");
-		button1.setPrefHeight(120);
-		button1.setPrefWidth(120);
-		AnchorPane.setTopAnchor(button1, 100.0);
+		button1.setPrefHeight(80);
+		button1.setPrefWidth(180);
+		AnchorPane.setTopAnchor(button1, 400.0);
 		AnchorPane.setLeftAnchor(button1, 250.0);
-				
-		Button button2=new Button("Start");
-		button2.setPrefHeight(120);
-		button2.setPrefWidth(120);
-		AnchorPane.setTopAnchor(button2, 220.0);
-		AnchorPane.setLeftAnchor(button2, 450.0);
+		button1.setStyle("-fx-font:16 arial");
 		
+		Button button2=new Button("Start");
+		button2.setPrefHeight(80);
+		button2.setPrefWidth(120);
+		AnchorPane.setTopAnchor(button2, 400.0);
+		AnchorPane.setLeftAnchor(button2, 460.0);
+		button2.setStyle("-fx-font:16 arial");
 		
 		
 		Button button3=new Button("Back");
-		button3.setPrefHeight(120);
+		button3.setPrefHeight(80);
 		button3.setPrefWidth(120);
-		AnchorPane.setTopAnchor(button3, 340.0);
-		AnchorPane.setLeftAnchor(button3, 650.00);
-		
+		AnchorPane.setTopAnchor(button3, 400.0);
+		AnchorPane.setLeftAnchor(button3, 800.0);
+		button3.setStyle("-fx-font:16 arial");
 		
 		
 		Button button4=new Button("Exit");
-		button4.setPrefHeight(120);
+		button4.setPrefHeight(80);
 		button4.setPrefWidth(120);
-		AnchorPane.setTopAnchor(button4, 460.0);
-		AnchorPane.setLeftAnchor(button4, 850.0);
+		AnchorPane.setTopAnchor(button4, 400.0);
+		AnchorPane.setLeftAnchor(button4, 950.0);
+		button4.setStyle("-fx-font:16 arial");
 		
 		button1.setOnAction(new EventHandler<ActionEvent>() {
 			public void handle(ActionEvent event) {

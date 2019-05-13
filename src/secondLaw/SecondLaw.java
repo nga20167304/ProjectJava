@@ -18,6 +18,7 @@ import javafx.scene.shape.MoveTo;
 import javafx.scene.shape.Path;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import project.Display;
 import project.Node2;
 import secondLaw.Arrow;
 
@@ -314,16 +315,35 @@ public class SecondLaw extends Application{
 		AnchorPane.setLeftAnchor(button3, 600.0);
 		button3.setStyle("-fx-font:18 arial");
 		
+		Button button4=new Button("Menu");
+		button4.setPrefHeight(100);
+		button4.setPrefWidth(100);
+		AnchorPane.setTopAnchor(button4, 250.0);
+		AnchorPane.setLeftAnchor(button4, 1000.0);
+		button4.setStyle("-fx-font:20 arial");
+		
 		button3.setOnAction(new EventHandler<ActionEvent>() {
 			public void handle(ActionEvent event) {
 				Node2 node=new Node2();
 				node.start2(primaryStage);
 			}
 		});
+		
+		button4.setOnAction(new EventHandler<ActionEvent>() {
+			public void handle(ActionEvent event) {
+				Display dp=new Display();
+				try {
+					dp.display(primaryStage);
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		});
 		root.getChildren().addAll(line1,line2,line3,line4);
 		root.getChildren().addAll(imageView1,imageView2,imageView3,imageView4);
 		root.getChildren().addAll(arrow1,arrow2,arrow3,arrow4);
-		root.getChildren().addAll(button1,button2,button3);
+		root.getChildren().addAll(button1,button2,button3,button4);
 		
 		Scene scene=new Scene(root,1400,700);
 		

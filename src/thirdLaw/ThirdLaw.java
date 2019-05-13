@@ -17,6 +17,7 @@ import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import project.Display;
 import project.Node3;
 
 public class ThirdLaw extends Application{
@@ -86,6 +87,14 @@ public class ThirdLaw extends Application{
 		AnchorPane.setLeftAnchor(button3, 600.0);
 		button3.setStyle("-fx-font:18 arial");
 		
+		
+		Button button4=new Button("Menu");
+		button4.setPrefHeight(100);
+		button4.setPrefWidth(100);
+		AnchorPane.setTopAnchor(button4, 400.0);
+		AnchorPane.setLeftAnchor(button4, 1000.0);
+		button4.setStyle("-fx-font:20 arial");
+		
 		button1.setOnAction(new EventHandler<ActionEvent>() {
 
 			@Override
@@ -112,9 +121,19 @@ public class ThirdLaw extends Application{
 			}
 		});
 		
+		button4.setOnAction(new EventHandler<ActionEvent>() {
+			public void handle(ActionEvent event) {
+				Display dp=new Display();
+				try {
+					dp.display(primaryStage);
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		});
 		
-		
-		root.getChildren().addAll(cir,line,button1,button2,button3);
+		root.getChildren().addAll(cir,line,button1,button2,button3,button4);
 		
 		
 		Scene scene=new Scene(root,1400,700);

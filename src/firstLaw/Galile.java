@@ -17,6 +17,7 @@ import javafx.scene.shape.Circle;
 import javafx.scene.shape.HLineTo;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import project.Display;
 import javafx.scene.shape.LineTo;
 import javafx.scene.shape.MoveTo;
 import javafx.scene.shape.Path;
@@ -194,8 +195,15 @@ public class Galile extends Application{
 		AnchorPane.setLeftAnchor(button3, 750.0);
 		button3.setStyle("-fx-font:20 arial");
 		
+		Button button4=new Button("Menu");
+		button4.setPrefHeight(100);
+		button4.setPrefWidth(100);
+		AnchorPane.setTopAnchor(button4, 550.0);
+		AnchorPane.setLeftAnchor(button4, 1000.0);
+		button4.setStyle("-fx-font:20 arial");
+		
 		root.getChildren().addAll(imageView1,imageView2,imageView3);
-		root.getChildren().addAll(button1,button2,button3);
+		root.getChildren().addAll(button1,button2,button3,button4);
 		root.getChildren().addAll(cir1,cir2,cir3);
 		
 		
@@ -223,17 +231,29 @@ public class Galile extends Application{
 		});
 		
 		
-		/*button3.setOnAction(new EventHandler<ActionEvent>() {
+		button3.setOnAction(new EventHandler<ActionEvent>() {
 			public void handle(ActionEvent event) {
 				Arixtot arixtot=new Arixtot();
 				try {
-					arixtot.T(primaryStage);
+					arixtot.TN_Arixtot(primaryStage);
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
-		});*/
+		});
+		
+		button4.setOnAction(new EventHandler<ActionEvent>() {
+			public void handle(ActionEvent event) {
+				Display dp=new Display();
+				try {
+					dp.display(primaryStage);
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		});
 		Scene scene=new Scene(root,1400,700);
 		
 		primaryStage.setTitle("Galileo");

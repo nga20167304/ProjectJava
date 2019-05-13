@@ -12,6 +12,7 @@ import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import firstLaw.Galile;
+import project.Display;
 
 public class Newtons extends Application{
 	public void start(Stage primaryStage) {
@@ -56,6 +57,21 @@ public class Newtons extends Application{
 		AnchorPane.setLeftAnchor(button2, 550.0);
 		button2.setStyle("-fx-font:20 arial");
 		
+		
+		Button button3=new Button("Next");
+		button3.setPrefHeight(100);
+		button3.setPrefWidth(100);
+		AnchorPane.setTopAnchor(button3, 550.0);
+		AnchorPane.setLeftAnchor(button3, 750.0);
+		button3.setStyle("-fx-font:20 arial");
+		
+		Button button4=new Button("Menu");
+		button4.setPrefHeight(100);
+		button4.setPrefWidth(100);
+		AnchorPane.setTopAnchor(button4, 550.0);
+		AnchorPane.setLeftAnchor(button4, 1000.0);
+		button4.setStyle("-fx-font:20 arial");
+		
 		button1.setOnAction(new EventHandler<ActionEvent>() {
 			public void handle(ActionEvent event) {
 				transition1.play();
@@ -69,8 +85,32 @@ public class Newtons extends Application{
 			}
 		});
 		
+		button3.setOnAction(new EventHandler<ActionEvent>() {
+			public void handle(ActionEvent event) {
+				Display dp=new Display();
+				try {
+					dp.display(primaryStage);
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		});
+		
+		button4.setOnAction(new EventHandler<ActionEvent>() {
+			public void handle(ActionEvent event) {
+				Display dp=new Display();
+				try {
+					dp.display(primaryStage);
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		});
+		
 		root.getChildren().addAll(cir1,cir2);
-		root.getChildren().addAll(button1,button2);
+		root.getChildren().addAll(button1,button2,button3,button4);
 		
 		Scene scene=new Scene(root,1400,700);
 		

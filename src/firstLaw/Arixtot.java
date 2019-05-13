@@ -19,6 +19,7 @@ import javafx.scene.text.TextBoundsType;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import firstLaw.Galile;
+import project.Display;
 import project.Node1;
 
 public class Arixtot extends Application{
@@ -34,14 +35,6 @@ public class Arixtot extends Application{
 		imageView.setTranslateX(500);
 		imageView.setTranslateY(130);
 		imageView.setPreserveRatio(true);
-		
-		InputStream input2 = clazz.getResourceAsStream("/application/hand-removebg.png");
-		Image image2 = new Image(input2);
-		ImageView imageView2 = new ImageView(image2);
-		imageView.setFitHeight(80);
-		imageView.setFitWidth(80);
-		imageView.setTranslateX();
-		imageView.setTranslateY();
 		
 		Circle cir = new Circle();
 		cir.setFill(Color.BLUEVIOLET);
@@ -77,9 +70,16 @@ public class Arixtot extends Application{
 		AnchorPane.setLeftAnchor(button3, 800.0);
 		button3.setStyle("-fx-font:20 arial");
 		
+		Button button4=new Button("Menu");
+		button4.setPrefHeight(100);
+		button4.setPrefWidth(100);
+		AnchorPane.setTopAnchor(button4, 450.0);
+		AnchorPane.setLeftAnchor(button4, 1000.0);
+		button4.setStyle("-fx-font:20 arial");
+		
 		AnchorPane root=new AnchorPane();
 		
-		root.getChildren().addAll(imageView,cir,button1,button2,button3);
+		root.getChildren().addAll(imageView,cir,button1,button2,button3,button4);
 		
 		Scene scene = new Scene(root,1400,700);
 		primaryStage.setTitle("First law");
@@ -117,6 +117,18 @@ public class Arixtot extends Application{
 				node.start1(primaryStage);
 			}
 			
+		});
+		
+		button4.setOnAction(new EventHandler<ActionEvent>() {
+			public void handle(ActionEvent event) {
+				Display dp=new Display();
+				try {
+					dp.display(primaryStage);
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
 		});
 	}
 	

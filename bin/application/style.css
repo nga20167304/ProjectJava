@@ -1,0 +1,25 @@
+
+#newtons{
+	-fx-background-image:url("/application/newton.jpg");
+	-fx-background-repeat:no-repeat;
+	-fx-background-size:1400 700;
+	-fx-background-position:center center;
+}
+#newtons1{
+	-fx-background-image:url("/application/newton1.jpg");
+	-fx-background-repeat:no-repeat;
+	-fx-background-size:1400 700;
+	-fx-background-position:center center;
+}
+#newtons2{
+	-fx-background-image:url("/application/newton2.jpg");
+	-fx-background-repeat:no-repeat;
+	-fx-background-size:1400 700;
+	-fx-background-position:center center;
+}
+#newtons3{
+	-fx-background-image:url("/application/newton3.jpg");
+	-fx-background-repeat:no-repeat;
+	-fx-background-size:1400 700;
+	-fx-background-position:center center;
+}

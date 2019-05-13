@@ -35,6 +35,14 @@ public class Arixtot extends Application{
 		imageView.setTranslateY(130);
 		imageView.setPreserveRatio(true);
 		
+		InputStream input2 = clazz.getResourceAsStream("/application/hand-removebg.png");
+		Image image2 = new Image(input2);
+		ImageView imageView2 = new ImageView(image2);
+		imageView.setFitHeight(80);
+		imageView.setFitWidth(80);
+		imageView.setTranslateX();
+		imageView.setTranslateY();
+		
 		Circle cir = new Circle();
 		cir.setFill(Color.BLUEVIOLET);
 		cir.setRadius(10);

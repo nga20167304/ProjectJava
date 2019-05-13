@@ -15,6 +15,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.HLineTo;
+import javafx.scene.shape.Line;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import project.Display;
@@ -171,40 +172,41 @@ public class Galile extends Application{
 		pathT3.setNode(cir3);
 		pathT3.setOrientation(PathTransition.OrientationType.ORTHOGONAL_TO_TANGENT);
 		
-	
+		Line line=new Line(0,550,1400,550);
+		line.setStroke(Color.DARKGRAY);
 		
 		Button button1=new Button("Start");
-		button1.setPrefHeight(100);
-		button1.setPrefWidth(100);
-		AnchorPane.setTopAnchor(button1, 550.0);
+		button1.setPrefHeight(80);
+		button1.setPrefWidth(120);
+		AnchorPane.setTopAnchor(button1, 600.0);
 		AnchorPane.setLeftAnchor(button1, 350.0);
 		button1.setStyle("-fx-font:20 arial");
 		
 		
 		Button button2=new Button("Next");
-		button2.setPrefHeight(100);
-		button2.setPrefWidth(100);
-		AnchorPane.setTopAnchor(button2, 550.0);
+		button2.setPrefHeight(80);
+		button2.setPrefWidth(120);
+		AnchorPane.setTopAnchor(button2, 600.0);
 		AnchorPane.setLeftAnchor(button2, 550.0);
 		button2.setStyle("-fx-font:20 arial");
 		
 		Button button3=new Button("Back");
-		button3.setPrefHeight(100);
-		button3.setPrefWidth(100);
-		AnchorPane.setTopAnchor(button3, 550.0);
+		button3.setPrefHeight(80);
+		button3.setPrefWidth(120);
+		AnchorPane.setTopAnchor(button3, 600.0);
 		AnchorPane.setLeftAnchor(button3, 750.0);
 		button3.setStyle("-fx-font:20 arial");
 		
 		Button button4=new Button("Menu");
-		button4.setPrefHeight(100);
-		button4.setPrefWidth(100);
-		AnchorPane.setTopAnchor(button4, 550.0);
+		button4.setPrefHeight(80);
+		button4.setPrefWidth(120);
+		AnchorPane.setTopAnchor(button4, 600.0);
 		AnchorPane.setLeftAnchor(button4, 1000.0);
 		button4.setStyle("-fx-font:20 arial");
 		
 		root.getChildren().addAll(imageView1,imageView2,imageView3);
 		root.getChildren().addAll(button1,button2,button3,button4);
-		root.getChildren().addAll(cir1,cir2,cir3);
+		root.getChildren().addAll(cir1,cir2,cir3,line);
 		
 		
 		button1.setOnAction(new EventHandler<ActionEvent>() {

@@ -93,6 +93,8 @@ public class Galile extends Application{
 		pathT1.setDuration(Duration.millis(3000));
 		pathT1.setPath(path1);
 		pathT1.setNode(cir1);
+		pathT1.setAutoReverse(true);
+		pathT1.setCycleCount(2);
 		pathT1.setOrientation(PathTransition.OrientationType.ORTHOGONAL_TO_TANGENT);
 		
 		
@@ -133,6 +135,8 @@ public class Galile extends Application{
 		pathT2.setDuration(Duration.millis(3000));
 		pathT2.setPath(path2);
 		pathT2.setNode(cir2);
+		pathT2.setAutoReverse(true);
+		pathT2.setCycleCount(2);
 		pathT2.setOrientation(PathTransition.OrientationType.ORTHOGONAL_TO_TANGENT);
 		
 		Circle cir3 = new Circle();
@@ -174,6 +178,7 @@ public class Galile extends Application{
 		
 		Line line=new Line(0,550,1400,550);
 		line.setStroke(Color.DARKGRAY);
+		line.setStrokeWidth(6);
 		
 		Button button1=new Button("Start");
 		button1.setPrefHeight(80);

@@ -110,6 +110,7 @@ public class Arixtot extends Application{
 		
 		Line line1=new Line(0,550,1400,550);
 		line1.setStroke(Color.DARKGRAY);
+		line1.setStrokeWidth(6);
 		
 		ImageView image1 = new ImageView(IMAGE);
 		image1.setOpacity(0.3);
